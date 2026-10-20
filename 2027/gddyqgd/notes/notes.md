@@ -1,7 +1,6 @@
 # 第一课总结
 
-
-## 工作流
+## 1. <mark>工作流</mark>
 
 ```mermaid
 graph LR
@@ -14,3 +13,15 @@ E[暂存区] --->|commit| C[本地仓库]
 C[本地仓库] --->|push| B[个人远程仓库]
 B[个人远程仓库] --->|PR| A[团队仓库]
 ```
+## 2. Linux
+
+Linux是操作系统内核，Ubuntu(Ros兼容性好)是发行版。
+
+```mermaid
+graph LR
+
+A[终端] --->|输入命令| B[shell]
+B[shell] --->|解释命令| C[Linux]
+```
+
+## 3. 
