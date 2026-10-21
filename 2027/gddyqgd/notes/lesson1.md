@@ -14,7 +14,7 @@ C[本地仓库] --->|push| B[个人远程仓库]
 B[个人远程仓库] --->|PR| A[团队仓库]
 ```
 
-## 2. Linux
+## 2. Linux&&shell
 
 - Linux是操作系统内核，Ubuntu(Ros兼容性好)是发行版。
 
@@ -24,6 +24,14 @@ graph LR
 A[终端] --->|输入命令| B[shell]
 B[shell] --->|解释命令| C[Linux]
 ```
+- ### bash常用命令
+
+- `lt`(less than):小于
+- `le`(less than or equal to):小于等于
+- `gt`(greater than):大于
+- `ge`(greater than):大于等于
+- `eq`(equal to):等于
+- `ne`(not equal to):不等于
 
 ## 3. Vim
 
@@ -47,6 +55,13 @@ B[shell] --->|解释命令| C[Linux]
 |rm|-r|project|
 |...|...|...|
 
+| 写法 | 作用 |
+| --- | --- |
+|>| 覆盖写入 |
+|>>| 追加写入 |
+|a \| b| 将前一个命令的输出交给后一个命令 |
+|a && b| 前一个命令成功后再执行后一个命令 
+
 2. 切换目录
 
 |cd|作用|
@@ -55,13 +70,13 @@ B[shell] --->|解释命令| C[Linux]
 |cd .|当前目录|
 |cd ..|返回上一级目录|
 
-4. 常用命令
+3. 常用命令
 
 |命令|作用|
 |:---|:---|
-|touch|创建空文件|
+|touch|创建空文件或更新时间戳|
 |rm -r|删除|
-|ls|显示文件|
+|ls|显示目录内容|
 |pwd|显示当前路径|
 |mkdir -p|创建目录|
 |mv|移动或重命名文件|
@@ -74,3 +89,4 @@ B[shell] --->|解释命令| C[Linux]
 ## 6. github
 
 - 用于多人合作完成项目
+
