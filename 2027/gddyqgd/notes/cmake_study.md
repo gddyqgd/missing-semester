@@ -177,3 +177,68 @@ my_project/                  <-- ${PROJECT_SOURCE_DIR}，项目根目录
 │       └── helper.cpp
 └── README.md
 ```
+
+
+
+# 我的 Catkin 学习笔记
+
+## catkin 是基于 cmake 的，专门为ros设计的.
+
+```text
+catkin_make → cmake → make → g++
+```
+
+## 工作空间
+
+```text
+/root/catkin_ws/
+├── src/
+├── build/
+└── devel/
+```
+
+- `src`：放自己的 ROS 包。
+- `build`：编译中间文件，不要乱改。
+- `devel`：编译结果，`setup.bash` 也在这里。
+
+## 一个包最少有什么
+
+```text
+my_package/
+├── package.xml
+└── CMakeLists.txt
+```
+
+- `package.xml`：包名+依赖什么。
+- `CMakeLists.txt`：源码怎么编译。
+
+## 编译运行
+
+```bash
+ros1
+cd /root/catkin_ws
+catkin_make
+source devel/setup.bash
+rosrun catkin_learning hello_node
+```
+
+`rosrun` 后面先写包名，再写程序名。
+
+## 易混的地方
+
+- `catkin_make` 要在 `/root/catkin_ws` 里运行。
+- 编译完找不到包，重新 `source devel/setup.bash`。
+- 改了 C++ 源码，重新 `catkin_make`。
+- 包名看 `package.xml`，程序名看 `add_executable`。
+- `build/` 和 `devel/` 不用自己写。
+
+## 总结
+
+```text
+package.xml      说需要什么
+CMakeLists.txt   说怎么编译
+catkin_make      编译
+rosrun           运行
+```
+
+
