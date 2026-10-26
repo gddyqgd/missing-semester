@@ -10,6 +10,7 @@
 ## 实现流程
 
 ```mermaid
+%%{init: {"flowchart": {"wrappingWidth": 1000}}}%%
 flowchart LR
     FLOW["流程"]
 
@@ -47,7 +48,7 @@ flowchart LR
 
     classDef root fill:#172b4d,stroke:#172b4d,color:#ffffff
     classDef step fill:#eef6ff,stroke:#4b7fb8,color:#172b4d
-    classDef command fill:#f6f8fa,stroke:#8c959f,color:#24292f,font-family:monospace
+    classDef command fill:#f6f8fa,stroke:#8c959f,color:#24292f,font-family:monospace,text-align:left,white-space:nowrap
     class FLOW root
     class S1,S2,S3,S4,S5,S6 step
     class C1,C2,C3,C4,C5,C6 command
